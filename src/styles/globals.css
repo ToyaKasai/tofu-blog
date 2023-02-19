@@ -4,10 +4,10 @@
 
 @layer base {
   html {
-    @apply w-full h-full;
+    @apply h-full w-full;
   }
 
   body {
-    @apply w-full h-full bg-white text-black dark:bg-black dark:text-white;
+    @apply h-full w-full bg-white text-black dark:bg-black dark:text-white;
   }
 }
