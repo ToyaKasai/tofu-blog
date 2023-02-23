@@ -11,7 +11,8 @@
     "prettier:check": "yarn prettier --check .",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "generate-component": "yarn hygen component new"
   },
   "dependencies": {
     "@next/font": "13.1.6",
