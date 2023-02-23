@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    @apply h-full w-full;
+    @apply h-full w-full font-default;
   }
 
   body {
     @apply h-full w-full bg-white text-black dark:bg-black dark:text-white;
+  }
+
+  #__next {
+    @apply h-full w-full flex flex-col;
   }
 }
