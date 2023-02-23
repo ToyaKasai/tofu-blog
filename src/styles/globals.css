@@ -14,6 +14,6 @@
   }
 
   #__next {
-    @apply h-full w-full flex flex-col;
+    @apply flex h-full w-full flex-col;
   }
 }
