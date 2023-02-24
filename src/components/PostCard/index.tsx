@@ -1,10 +1,11 @@
 import { FC } from 'react';
 import { Link, AppLink } from '@/components/AppLink';
+import { PostCategory } from '@/components/PostCategory';
 
 type Props = Link & {
   postTitle: string;
   postDescription: string;
-  category: string; // FIXME: type化
+  category: string;
 };
 
 export const PostCard: FC<Props> = ({ postTitle, postDescription, category, ...link }) => {
@@ -18,7 +19,9 @@ export const PostCard: FC<Props> = ({ postTitle, postDescription, category, ...l
         <p className="text-2xl font-bold lg:text-3xl">{postTitle}</p>
         <p className="text-sm text-gray-500 dark:text-gray-400 lg:text-lg">{postDescription}</p>
       </span>
-      <p className="self-end">{category}</p>
+      <span className="self-end">
+        <PostCategory name={category} />
+      </span>
     </AppLink>
   );
 };
