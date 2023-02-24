@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import { AiOutlineGithub } from 'react-icons/ai';
-import { GITHUB_LiNK } from '@/constants';
+import { GITHUB_LINK } from '@/constants';
 
 export const Header: FC = () => {
   return (
@@ -17,7 +17,7 @@ export const Header: FC = () => {
           />
           <p className="font-mPlus text-xl font-bold">Toya Kasai</p>
         </div>
-        <a href={GITHUB_LiNK} target="_blank" rel="noreferrer noopener" title="github">
+        <a href={GITHUB_LINK} target="_blank" rel="noreferrer noopener" title="github">
           <AiOutlineGithub size="28" />
         </a>
       </div>
