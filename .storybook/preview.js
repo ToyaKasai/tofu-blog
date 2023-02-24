@@ -9,7 +9,6 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  layout: 'fullscreen',
 };
 
 // NOTE: next/imageに対応
