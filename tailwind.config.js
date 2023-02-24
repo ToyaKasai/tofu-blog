@@ -5,7 +5,8 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      default: ["'M PLUS Rounded 1c'", 'Verdana', 'sans-serif'],
+      default: ['sans-serif', 'system-ui'],
+      mPlus: ["'M PLUS Rounded 1c'", 'Verdana', 'sans-serif', 'system-ui'],
     },
     extend: {
       spacing: {
