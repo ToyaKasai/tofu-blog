@@ -12,9 +12,9 @@ export default {
 
 export const Default: Story = {
   args: {
-    postTitle: 'post title',
+    postTitle: 'Next.js Directory Structure',
     postDescription: 'post description',
-    category: 'Next.js',
+    categories: ['Frontend', 'Next.js'],
     href: '#',
   },
 };
