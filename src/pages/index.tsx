@@ -20,7 +20,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
       postTitle: title,
       postDescription: description,
       categories: formattedCategories,
-      href: '#', // FiXME: link修正
+      href: `/${id}`,
     };
   });
 
