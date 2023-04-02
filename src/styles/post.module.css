@@ -1,5 +1,5 @@
 .postContent {
-  @apply text-base font-mPlus space-y-6
+  @apply space-y-6 font-mPlus text-base;
 }
 
 .postContent > h1 {
@@ -7,7 +7,7 @@
 }
 
 .postContent > h2 {
-  @apply text-xl font-medium pb-1 border-b border-gray-300 dark:border-gray-600;
+  @apply border-b border-gray-300 pb-1 text-xl font-medium dark:border-gray-600;
 }
 
 .postContent > h3 {
@@ -19,5 +19,5 @@
 }
 
 .postContent a {
-  @apply text-sky-600 dark:text-sky-400 hover:underline;
+  @apply text-sky-600 hover:underline dark:text-sky-400;
 }
