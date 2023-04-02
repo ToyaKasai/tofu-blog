@@ -1,0 +1,23 @@
+.postContent {
+  @apply text-base font-mPlus space-y-6
+}
+
+.postContent > h1 {
+  @apply text-2xl font-medium;
+}
+
+.postContent > h2 {
+  @apply text-xl font-medium pb-1 border-b border-gray-300 dark:border-gray-600;
+}
+
+.postContent > h3 {
+  @apply text-lg font-medium;
+}
+
+.postContent > h4 {
+  @apply text-base font-medium;
+}
+
+.postContent a {
+  @apply text-sky-600 dark:text-sky-400 hover:underline;
+}
