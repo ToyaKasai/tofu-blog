@@ -11,6 +11,7 @@ import { PostCategory } from '@/components/PostCategory';
 import { HTMLParser } from '@/components/HTMLParser';
 
 import { formatDateTimeString } from '@/utils';
+import { formatCodeBlockToHighlight } from '@/libs/highlightjs';
 
 type Props = { post: Blog };
 type QueryParams = ParsedUrlQuery & {
@@ -25,7 +26,14 @@ export const getServerSideProps: GetServerSideProps<Props, QueryParams> = async 
   }
 
   const post = await cmsClient.get<Blog>({ endpoint: ENDPOINT.BLOGS, contentId: id });
-  return { props: { post } };
+  return {
+    props: {
+      post: {
+        ...post,
+        content: formatCodeBlockToHighlight(post.content),
+      },
+    },
+  };
 };
 
 const PostDetail: NextPage<Props> = ({ post }) => {
