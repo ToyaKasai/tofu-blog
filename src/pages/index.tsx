@@ -6,6 +6,7 @@ import { Blog, ContentList } from '@/api/cms/model';
 
 import { PostCard } from '@/components/PostCard';
 import { PageLayout } from '@/components/PageLayout';
+import { Seo } from '@/components/Seo';
 
 type Post = ComponentProps<typeof PostCard> & { id: string };
 type Props = { posts: Array<Post> };
@@ -29,16 +30,19 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 
 const Index: NextPage<Props> = ({ posts }) => {
   return (
-    <PageLayout>
-      <h1 className="font-mPlus text-xl font-medium lg:text-2xl">All Posts</h1>
-      <ul className="mt-5 space-y-4 lg:mt-9">
-        {posts.map(({ id, ...post }) => (
-          <li key={`post-${id}`}>
-            <PostCard {...post} />
-          </li>
-        ))}
-      </ul>
-    </PageLayout>
+    <>
+      <Seo />
+      <PageLayout>
+        <h1 className="font-mPlus text-xl font-medium lg:text-2xl">All Posts</h1>
+        <ul className="mt-5 space-y-4 lg:mt-9">
+          {posts.map(({ id, ...post }) => (
+            <li key={`post-${id}`}>
+              <PostCard {...post} />
+            </li>
+          ))}
+        </ul>
+      </PageLayout>
+    </>
   );
 };
 
