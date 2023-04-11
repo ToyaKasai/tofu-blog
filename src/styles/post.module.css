@@ -21,3 +21,7 @@
 .postContent a {
   @apply text-sky-600 hover:underline dark:text-sky-400;
 }
+
+.postContent pre > code {
+  @apply text-sm rounded-md;
+}
