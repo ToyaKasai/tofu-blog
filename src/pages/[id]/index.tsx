@@ -9,9 +9,10 @@ import { cmsClient, ENDPOINT } from '@/api/cms/client';
 import { PageLayout } from '@/components/PageLayout';
 import { PostCategory } from '@/components/PostCategory';
 import { HTMLParser } from '@/components/HTMLParser';
+import { Seo } from '@/components/Seo';
 
-import { formatDateTimeString } from '@/utils';
 import { formatCodeBlockToHighlight } from '@/libs/highlightjs';
+import { formatDateTimeString, generateSeoTitle } from '@/utils';
 
 type Props = { post: Blog };
 type QueryParams = ParsedUrlQuery & {
@@ -44,23 +45,26 @@ const PostDetail: NextPage<Props> = ({ post }) => {
     [publishedAt]
   );
   return (
-    <PageLayout backLink="/">
-      <ul className="flex space-x-1 lg:space-x-2">
-        {categories.map(({ id, name }) => (
-          <li key={id}>
-            <PostCategory name={name} />
-          </li>
-        ))}
-      </ul>
-      <div className="mt-4 space-y-2 lg:mt-6 lg:space-y-4">
-        <p className="text-sm text-gray-400 dark:text-gray-400">{formattedPublishedAt}</p>
-        <h1 className="font-mPlus text-xl font-medium lg:text-2xl">{title}</h1>
-        <p className="text-sm lg:text-base">{description}</p>
-      </div>
-      <div className="mt-14">
-        <HTMLParser htmlString={content} />
-      </div>
-    </PageLayout>
+    <>
+      <Seo title={generateSeoTitle(title)} description={description} />
+      <PageLayout backLink="/">
+        <ul className="flex space-x-1 lg:space-x-2">
+          {categories.map(({ id, name }) => (
+            <li key={id}>
+              <PostCategory name={name} />
+            </li>
+          ))}
+        </ul>
+        <div className="mt-4 space-y-2 lg:mt-6 lg:space-y-4">
+          <p className="text-sm text-gray-400 dark:text-gray-400">{formattedPublishedAt}</p>
+          <h1 className="font-mPlus text-xl font-medium lg:text-2xl">{title}</h1>
+          <p className="text-sm lg:text-base">{description}</p>
+        </div>
+        <div className="mt-14">
+          <HTMLParser htmlString={content} />
+        </div>
+      </PageLayout>
+    </>
   );
 };
 

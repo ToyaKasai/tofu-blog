@@ -6,7 +6,7 @@ import { useRouteProgress } from '@/hooks/useRouteProgress';
 
 import '@/styles/nprogress.css';
 
-export default function Portfolio({ Component, pageProps }: AppProps) {
+export default function ToyaKasaiTechBlogApp({ Component, pageProps }: AppProps) {
   useRouteProgress();
 
   return (
