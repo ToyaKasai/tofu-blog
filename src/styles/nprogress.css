@@ -3,5 +3,5 @@
 }
 
 #nprogress .bar {
-  @apply fixed z-progress top-0 left-0 bg-amber-400 w-full h-1 dark:bg-amber-500;
+  @apply fixed top-0 left-0 z-progress h-1 w-full bg-amber-400 dark:bg-amber-500;
 }
