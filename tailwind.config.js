@@ -13,6 +13,7 @@ module.exports = {
         header: '56px',
       },
       zIndex: {
+        progress: 100,
         header: 50,
       },
     },
