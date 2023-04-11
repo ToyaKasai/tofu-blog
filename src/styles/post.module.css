@@ -23,5 +23,5 @@
 }
 
 .postContent pre > code {
-  @apply text-sm rounded-md;
+  @apply rounded-md text-sm;
 }
