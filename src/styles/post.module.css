@@ -22,6 +22,15 @@
   @apply text-sky-600 hover:underline dark:text-sky-400;
 }
 
+.postContent ul {
+  @apply list-disc pl-6 space-y-1.5;
+}
+
+.postContent li code,
+.postContent p code {
+  @apply bg-gray-700 p-1 rounded-md text-sm;
+}
+
 .postContent pre > code {
   @apply rounded-md text-sm;
 }
