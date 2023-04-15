@@ -28,7 +28,7 @@
 
 .postContent li code,
 .postContent p code {
-  @apply bg-gray-700 p-1 rounded-md text-sm;
+  @apply bg-gray-200 p-1 rounded-md text-sm dark:bg-gray-700;
 }
 
 .postContent pre > code {
